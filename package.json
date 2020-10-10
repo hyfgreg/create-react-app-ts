@@ -1,0 +1,56 @@
+{
+  "name": "create-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^5.6.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "axios": "^0.19.2",
+    "history": "^5.0.0",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.3.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "mock": "json-server --watch ./mock/db.json --port 4001 --routes ./mock/routes.json",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/nprogress": "^0.2.0",
+    "@types/react-router-dom": "^5.1.5",
+    "compression-webpack-plugin": "^4.0.1",
+    "craco-less": "^1.17.0",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0"
+  }
+}
