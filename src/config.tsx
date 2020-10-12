@@ -1,7 +1,7 @@
 import { API_ENV } from './env';
 
 const END_POINTS: IEndPoints = {
-  development: 'http://192.168.88.241:9500',
+  development: '/api',
   test: 'http://192.168.88.241:9500',
   production: 'http://192.168.88.241:9500',
 }

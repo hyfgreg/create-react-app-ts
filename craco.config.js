@@ -7,12 +7,22 @@ const CracoLessPlugin = require("craco-less");
 module.exports = {
   devServer: {
     // host: '0.0.0.0',
-    port: 8000,
+    port: 8090,
     hot: true,
     inline: true,
     historyApiFallback: true,
     disableHostCheck: true,
     quiet: true, // 关闭提示
+    proxy:{
+      '/api': {
+        target: 'http://192.168.88.241:9500',
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
   },
   webpack: {
     plugins: [

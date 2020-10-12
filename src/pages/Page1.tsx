@@ -1,9 +1,12 @@
 import React from 'react';
+// import { Layout, Menu } from 'antd';
+
+// const { Header, Content, Footer } = Layout;
 
 class Page1 extends React.Component {
   render() {
     return (
-      <div>Page1</div>
+      <div>page1</div>
     )
   }
 }

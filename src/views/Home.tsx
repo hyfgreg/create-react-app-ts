@@ -1,9 +1,12 @@
 import React from 'react';
-import { Route, Redirect, match, Switch, Link } from 'react-router-dom';
-import { toJS } from 'mobx';
+import { Route, Redirect, match, Switch } from 'react-router-dom';
+// import { toJS } from 'mobx';
 import { observer, inject } from 'mobx-react';
+import { Layout } from 'antd';
 
-import HomeRoutes, { HomeMenu } from 'router/HomeRoutes';
+import HomeRoutes from 'router/HomeRoutes';
+
+const { Header } = Layout
 
 interface IProps extends IHistoryProps {
   match: match
@@ -19,15 +22,13 @@ interface Home {
 class Home extends React.Component {
   render() {
     const rootPath = this.props.match.url;
-    const username = toJS(this.props.store.username);
+    // const username = toJS(this.props.store.username);
     return (
       <>
-        Hello, {username}!
-        {
-          HomeMenu.map((menu: IMenu) => (
-            <Link key={menu.key} to={`${rootPath}${menu.path}`}>{menu.name}</Link>
-          ))
-        }
+      <Layout className="layout">
+        <Header>
+          <div className="app-header__logo" style={{ textAlign: 'left' }}>Xmov</div>
+        </Header>
         <Switch>
           {
             HomeRoutes.map((route: IRoute) => route.redirect
@@ -46,6 +47,7 @@ class Home extends React.Component {
             )
           }
         </Switch>
+      </Layout>
       </>
     );
   }

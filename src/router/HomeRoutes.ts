@@ -9,13 +9,13 @@ const HomeRoutes: IRoute[] = [
   {
     path: '',
     key: 'root-home',
-    redirect: '/page1',
+    redirect: '/project-list',
   },
   {
-    path: '/page1',
-    key: 'page1',
+    path: '/project-list',
+    key: 'project-list',
     exact: true,
-    component: Pages.Page1,
+    component: Pages.ProjectList,
   },
   {
     path: '/page2',
