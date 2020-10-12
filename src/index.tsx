@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 
 import store from 'store';
+import { token } from 'modules/storage'
 
+import 'antd/dist/antd.css'
 import './css/reset.css';
 import "nprogress/nprogress.css";
 import './css/app.less';
@@ -20,6 +22,9 @@ function render() {
 }
 
 function initApp(cb?: Function) {
+  if(token.valid()){
+    store.setUser(token.get())
+  }
   if (cb) {
     cb();
   }

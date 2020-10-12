@@ -1,8 +1,9 @@
+import { REACT_APP_PROJECT_NAME } from 'env'
 import storage from 'utils/storage';
 
 export const token = {
   get() {
-    return storage.get(`${process.env.REACT_APP_PROJECT_NAME}__user`);
+    return storage.get(`${REACT_APP_PROJECT_NAME}__user`);
   },
   valid() {
     const user: IAuthLoginResponse = this.get();

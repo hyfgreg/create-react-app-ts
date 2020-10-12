@@ -3,9 +3,6 @@ const { whenProd } = require("@craco/craco");
 const CompressionPlugin = require('compression-webpack-plugin');
 const CracoLessPlugin = require("craco-less");
 
-const path = require('path')
-
-const pathResolve = pathUrl => path.join(__dirname, pathUrl)
 
 module.exports = {
   devServer: {
@@ -18,9 +15,6 @@ module.exports = {
     quiet: true, // 关闭提示
   },
   webpack: {
-    alias: {
-      '@': pathResolve('./')
-    },
     plugins: [
       ...whenProd(() => [
         new CompressionPlugin({

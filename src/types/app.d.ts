@@ -23,6 +23,8 @@ interface IHistoryProps {
 interface IAppStore {
   username: string
   setUsername: (username: string) => void
+  user: ILooseObject
+  setUser: (user:ILooseObject) => void
 }
 
 interface IAuthLoginResponse {
@@ -31,4 +33,10 @@ interface IAuthLoginResponse {
   expire_time: string;
   expire_in: number;
   session_id: string;
+}
+
+interface IEndPoints {
+  development: string;
+  test: string;
+  production: string;
 }

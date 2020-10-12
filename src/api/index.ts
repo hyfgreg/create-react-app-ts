@@ -1,8 +1,9 @@
 import { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import NProgress from 'nprogress';
 import HTTP from 'utils/http';
+import { END_POINT } from 'config';
 
-const EndPoint = 'http://xxx';
+
 
 // 请求拦截
 const requestInterceptors = (config: AxiosRequestConfig) => {
@@ -31,7 +32,7 @@ const errorInterceptors = (error: AxiosError) => {
 };
 
 export default new HTTP(
-  { baseURL: EndPoint },
+  { baseURL: END_POINT },
   {
     requestInterceptors,
     responseInterceptors,
